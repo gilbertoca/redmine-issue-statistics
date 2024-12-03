@@ -1,6 +1,6 @@
 class IssuestatsController < ApplicationController
   unloadable
-  before_filter :find_project_by_project_id ,:authorize
+  before_filter :find_project, :authorize
 
   def index
     @project = Project.find(params[:project_id])
